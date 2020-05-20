@@ -15,7 +15,6 @@
 
 #include "XMLParser/XMLParser.h"
 
-
 namespace runos {
 using interfaces = std::set<uint32_t>;
 

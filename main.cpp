@@ -16,8 +16,8 @@ int main() {
     try {
         XMLParser parser;
         runos::MkRequest mk_req;
-
         //ShowTest(parser);
+        mk_req.CreateVlan(1);
     }
     catch (const std::exception& er){
         std::cout <<er.what() << std::endl;

@@ -3,6 +3,7 @@ project(xml_parsing)
 include(CheckCXXCompilerFlag)
 
 set(CMAKE_CXX_STANDARD 17)
+find_package(Boost 1.72.0 REQUIRED)
 
 function(enable_cxx_compiler_flag_if_supported flag)
     string(FIND "${CMAKE_CXX_FLAGS}" "${flag}" flag_already_set)
@@ -28,4 +29,5 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/l
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_INCLUDE_PATH} -lyang)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-
+target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
