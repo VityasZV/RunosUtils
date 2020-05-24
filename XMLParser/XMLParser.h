@@ -20,7 +20,7 @@ public:
     auto Init(const std::string &&filename) -> void;
 
     auto ShowAll() -> void;
-    auto Show(pugi::xml_node node) -> void;
+    static auto Show(pugi::xml_node node) -> void;
     auto VMXConfigParse() -> Config;
     auto GetInterfaceSpeed(pugi::xml_node node) -> uint32_t;
     auto GetInterfaceName(pugi::xml_node node) -> std::string;
